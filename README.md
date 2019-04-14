@@ -18,9 +18,9 @@ $ open https://cmake.org/
 ```ShellSession
 $ export GITHUB_USERNAME=<имя_пользователя>
 ```
-```ShellSession
 
 # Заходим в свой workspace и активируем скрипты
+```ShellSession
 $ cd ${GITHUB_USERNAME}/workspace
 $ pushd .
 $ source scripts/activate
