@@ -26,6 +26,7 @@ $ pushd .
 $ source scripts/activate
 ```
 
+#Работа с гит
 ```ShellSession
 $ git clone https://github.com/${GITHUB_USERNAME}/lab02.git projects/lab03
 
@@ -40,6 +41,7 @@ $ git remote remove origin
 $ git remote add origin https://github.com/${GITHUB_USERNAME}/lab03.git
 ```
 
+#Работаем с файлами
 ```ShellSession
 $ g++ -std=c++11 -I./include -c sources/print.cpp
 $ ls print.o
@@ -94,6 +96,7 @@ hello
 
 ```
 
+#Удаление файлов
 ```ShellSession
 $ rm -rf example1.o example2.o print.o
 $ rm -rf print.a
@@ -101,6 +104,7 @@ $ rm -rf example1 example2
 $ rm -rf log.txt
 ```
 
+#Создание конфигурации
 ```ShellSession
 $ cat > CMakeLists.txt <<EOF
 cmake_minimum_required(VERSION 3.4)
@@ -108,6 +112,7 @@ project(print)
 EOF
 ```
 
+#Устанавливаем 11 стандарт
 ```ShellSession
 $ cat >> CMakeLists.txt <<EOF
 set(CMAKE_CXX_STANDARD 11)
@@ -115,18 +120,21 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 EOF
 ```
 
+#Добавляем библиотеку
 ```ShellSession
 $ cat >> CMakeLists.txt <<EOF
 add_library(print STATIC \${CMAKE_CURRENT_SOURCE_DIR}/sources/print.cpp)
 EOF
 ```
 
+#Указываем дирректорию
 ```ShellSession
 $ cat >> CMakeLists.txt <<EOF
 include_directories(\${CMAKE_CURRENT_SOURCE_DIR}/include)
 EOF
 ```
 
+#Сборка проекта
 ```ShellSession
 $ cmake -H. -B_build
 -- The C compiler identification is AppleClang 10.0.1.10010046
@@ -155,6 +163,7 @@ Scanning dependencies of target print
 
 ```
 
+#Подаем аргументы
 ```ShellSession
 $ cat >> CMakeLists.txt <<EOF
 
@@ -163,6 +172,7 @@ add_executable(example2 \${CMAKE_CURRENT_SOURCE_DIR}/examples/example2.cpp)
 EOF
 ```
 
+#Добавляем target_link
 ```ShellSession
 $ cat >> CMakeLists.txt <<EOF
 
@@ -171,6 +181,7 @@ target_link_libraries(example2 print)
 EOF
 ```
 
+#Сборка проекта
 ```ShellSession
 $ cmake --build _build
 -- Configuring done
@@ -199,6 +210,7 @@ $ cmake --build _build --target example2
 
 ```
 
+#Работаем с проектом
 ```ShellSession
 $ ls -la _build/libprint.a
 -rw-r--r--  1 macbook  staff  13456 13 апр 22:50 _build/libprint.a
@@ -211,6 +223,7 @@ hello
 $ rm -rf log.txt
 ```
 
+#Работаем с репозиторием
 ```ShellSession
 $ git clone https://github.com/tp-labs/lab03 tmp
 Cloning into 'tmp'...
