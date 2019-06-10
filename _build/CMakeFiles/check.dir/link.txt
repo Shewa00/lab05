@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/check.dir/tests/test1.cpp.o  -o check libprint.a third-party/gtest/googlemock/gtest/libgtest_main.a third-party/gtest/googlemock/gtest/libgtest.a -pthread 

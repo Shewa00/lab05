@@ -1,0 +1,29 @@
+Start testing: May 26 09:52 MSK
+----------------------------------------------------------
+1/1 Testing: check
+1/1 Test: check
+Command: "/home/nothingholy/nothingholy/workspace/projects/lab05/_build/check"
+Directory: /home/nothingholy/nothingholy/workspace/projects/lab05/_build
+"check" start time: May 26 09:52 MSK
+Output:
+----------------------------------------------------------
+Running main() from /home/nothingholy/nothingholy/workspace/projects/lab05/third-party/gtest/googletest/src/gtest_main.cc
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from Print
+[ RUN      ] Print.InFileStream
+[       OK ] Print.InFileStream (0 ms)
+[----------] 1 test from Print (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"check" end time: May 26 09:52 MSK
+"check" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: May 26 09:52 MSK

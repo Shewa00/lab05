@@ -1,0 +1,33 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/nothingholy/nothingholy/workspace/projects/lab05/_build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9b644/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9b644.dir/build.make CMakeFiles/cmTC_9b644.dir/build
+make[1]: вход в каталог «/home/nothingholy/nothingholy/workspace/projects/lab05/_build/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_9b644.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_9b644.dir/CheckSymbolExists.c.o   -c /home/nothingholy/nothingholy/workspace/projects/lab05/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_9b644
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9b644.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_9b644.dir/CheckSymbolExists.c.o  -o cmTC_9b644 
+/usr/bin/ld: CMakeFiles/cmTC_9b644.dir/CheckSymbolExists.c.o: in function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: ошибка: выполнение ld завершилось с кодом возврата 1
+make[1]: *** [CMakeFiles/cmTC_9b644.dir/build.make:87: cmTC_9b644] Ошибка 1
+make[1]: выход из каталога «/home/nothingholy/nothingholy/workspace/projects/lab05/_build/CMakeFiles/CMakeTmp»
+make: *** [Makefile:121: cmTC_9b644/fast] Ошибка 2
+
+File /home/nothingholy/nothingholy/workspace/projects/lab05/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
